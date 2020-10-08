@@ -1,6 +1,5 @@
 const nodemailer = require('nodemailer');
-import dotenv from 'dotenv';
-dotenv.config();
+const config = require('dotenv').config();
 
 const transConfig = {
   host: process.env.MAIL_HOST,
