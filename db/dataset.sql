@@ -1,0 +1,1 @@
+INSERT INTO "task"(title_task) VALUES ('Faire les courses'), ('Reparer la voiture'), ('Reserver stage de pilotage'), ('Checker disponibilité self garage');
