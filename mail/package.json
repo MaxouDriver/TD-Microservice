@@ -1,0 +1,17 @@
+{
+  "name": "mail-service",
+  "version": "1.0.0",
+  "description": "a simple mail microservice using nodemailer in node js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danny Suarez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "express": "^4.15.4",
+    "nodemailer": "^4.1.0"
+  }
+}

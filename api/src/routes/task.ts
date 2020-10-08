@@ -1,5 +1,6 @@
 import {Router, Request, Response} from 'express';
 import {PoolClient} from 'pg';
+import request from 'request';
 import pool from '../database';
 
 const router: Router = Router();
@@ -59,6 +60,20 @@ router.post('/', (req: Request, res: Response) => {
 				res.status(400).send({ message: err });
 				return;
 			}
+
+			var clientServerOptions = {
+				uri: 'http://mail:5000/mail',
+				body: JSON.stringify({
+					data: `You created the task ${title_task}`
+				}),
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			}
+			request(clientServerOptions, function (error, response) {
+				return;
+			});
 
 			res.status(200).send(result.rows);
 		});
